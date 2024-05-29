@@ -1,0 +1,5 @@
+venv
+pychache
+migrations
+db.sqlite3
+media

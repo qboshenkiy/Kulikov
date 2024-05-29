@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <img
+        src="{% static 'image/горизонтальный@1x.png' %}"
+        alt=""
+        class="head-img"
+      />
+      <div class="title-box">
+        <p class="text-top">АССОРТИМЕНТ</p>
+        <h1 class="title-center">НАША ПРОДУКЦИЯ</h1>
+        <p class="text-bottom">
+          Более 200 наименований десертов на любой вкус!
+        </p>
+      </div>
+    </header>
+    <main>
+      <div class="main-box">
+        {% for product in products %}
+        <div class="card">
+          <h1 class="title-item">{{ product.title }}</h1>
+          <img src="{{ product.image.url }}" alt="" class="image" />
+          <div class="text">
+            <h1 class="title-item">{{ product.title }}</h1>
+            <p class="text-item">{{ product.desc }}</p>
+          </div>
+        </div>
+          {% endfor %}
+      </div>
+    </main>
+    <footer>
+      <div class="social">
+        <h1 class="title-soc">МЫ В СОЦИАЛЬНЫХ СЕТЯХ</h1>
+        <div class="titlebox">
+          <img src="" alt="" class="insta-kg" />
+          <div class="text-footer">Instagram KG</div>
+        </div>
+        <div class="titlebox">
+          <img src="" alt="" class="insta-kz" />
+          <div class="text-footer">Instagram KZ</div>
+        </div>
+        <div class="titlebox">
+          <img src="" alt="" class="yt" />
+          <div class="text-footer">ВКонтакте RU</div>
+        </div>
+        <div class="titlebox">
+          <img src="" alt="" class="vk-ru" />
+          <div class="text-footer">YouTube</div>
+        </div>
+      </div>
+      <div class="mb">
+        <div class="box-footer">
+          <h1 class="title-soc">МОБИЛЬНОЕ ПРИЛОЖЕНИЕ</h1>
+          <div class="titlebox">
+            <img src="" alt="" class="insta-kg" />
+            <div class="text-footer">Google Play</div>
+          </div>
+          <div class="titlebox">
+            <img src="" alt="" class="insta-kz" />
+            <div class="text-footer">App Store</div>
+          </div>
+        </div>
+        <div class="box-footer">
+          <h1 class="title-soc">КОМПАНИЯ</h1>
+          <div class="titlebox">
+            <img src="" alt="" class="insta-kg" />
+            <div class="text-footer">Вакансии</div>
+          </div>
+          <div class="titlebox">
+            <img src="" alt="" class="insta-kz" />
+            <div class="text-footer">Контакты</div>
+          </div>
+          <div class="titlebox">
+            <img src="" alt="" class="insta-kz" />
+            <div class="text-footer">Реквизиты</div>
+          </div>
+          <div class="titlebox">
+            <img src="" alt="" class="insta-kz" />
+            <div class="text-footer">О нас</div>
+          </div>
+        </div>
+        <div class="box-footer">
+          <h1 class="title-soc">МАГАЗИН</h1>
+          <div class="titlebox">
+            <img src="" alt="" class="insta-kg" />
+            <div class="text-footer">Кыргызстан</div>
+          </div>
+          <div class="titlebox">
+            <img src="" alt="" class="insta-kz" />
+            <div class="text-footer">Казахстан</div>
+          </div>
+          <div class="titlebox">
+            <img src="" alt="" class="insta-kz" />
+            <div class="text-footer">Россия</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
